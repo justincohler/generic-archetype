@@ -1,5 +1,6 @@
 package core.service;
 
+import javax.inject.Inject;
 import core.dao.api.ItemDao;
 import core.service.api.ItemService;
 import domain.api.Item;
@@ -12,7 +13,7 @@ public class ItemServiceImpl implements ItemService {
 		return itemDao.find(id);
 	}
 	
-	// Injector
+	@Inject
 	public void setItemDao(ItemDao itemDao) {
 		this.itemDao = itemDao;
 	}
